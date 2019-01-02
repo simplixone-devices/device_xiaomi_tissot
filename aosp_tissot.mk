@@ -18,10 +18,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from mido device
+# Inherit from tissot device
 $(call inherit-product, device/xiaomi/tissot/device.mk)
 
-# Inherit some common LineageOS stuff.
+# Inherit some common PixelExperience stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+CUSTOM_BUILD_TYPE := EXTENDED
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
@@ -36,10 +39,7 @@ TARGET_VENDOR := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="tissot-user 8.0.0 OPR1.170623.026 8.1.10 release-keys"
+    PRIVATE_BUILD_DESC="tissot-user 9 PKQ1.180917.001 V10.0.4.0.PDHMIXM release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "xiaomi/tissot/tissot_sprout:8.0.0/OPR1.170623.026/8.1.10:user/release-keys"
-
-# Gapps
-TARGET_GAPPS_ARCH := arm64
+BUILD_FINGERPRINT := "xiaomi/tissot/tissot_sprout:9/PKQ1.180917.001/V10.0.4.0.PDHMIXM:user/release-keys"

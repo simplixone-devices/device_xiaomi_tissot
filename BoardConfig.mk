@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2018-12-05
+VENDOR_SECURITY_PATCH := 2019-01-05
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/minimal
